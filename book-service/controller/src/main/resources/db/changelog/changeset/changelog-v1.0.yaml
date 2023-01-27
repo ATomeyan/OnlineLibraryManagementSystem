@@ -1,0 +1,107 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1669892739424-1
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(255)
+            tableName: author
+  - changeSet:
+      id: 1669892739424-2
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: author_id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: book_id
+                  type: bigint
+            tableName: authors_books
+  - changeSet:
+      id: 1669892739424-3
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: description
+                  type: VARCHAR(500)
+              - column:
+                  name: image
+                  type: BLOB
+              - column:
+                  constraints:
+                    nullable: false
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: page
+                  type: INT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: publish_year
+                  type: INT
+            tableName: book
+  - changeSet:
+      id: 1669892739424-4
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: book_id
+            indexName: FKbjp7syqc25hpghr8kfj5me7qk
+            tableName: authors_books
+  - changeSet:
+      id: 1669892739424-5
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: author_id
+            indexName: FKo3r5etc5qcjlys9yartx3jgcp
+            tableName: authors_books
+

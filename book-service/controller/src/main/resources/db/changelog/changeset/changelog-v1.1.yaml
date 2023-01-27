@@ -1,0 +1,208 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1670223966077-1
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(255)
+            tableName: author
+  - changeSet:
+      id: 1670223966077-2
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: author_id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: book_id
+                  type: bigint
+            tableName: authors_books
+  - changeSet:
+      id: 1670223966077-3
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: description
+                  type: VARCHAR(500)
+              - column:
+                  name: image
+                  type: BLOB
+              - column:
+                  constraints:
+                    nullable: false
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: page
+                  type: INT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: publish_year
+                  type: INT
+            tableName: book
+  - changeSet:
+      id: 1670223966077-4
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(255)
+            tableName: publisher
+  - changeSet:
+      id: 1670223966077-5
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: publisher_id
+                  type: bigint
+              - column:
+                  constraints:
+                    nullable: false
+                  name: book_id
+                  type: bigint
+            tableName: books_publishers
+  - changeSet:
+      id: 1670223966077-6
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: publisher_id
+            indexName: FKbcpe8qjcevmbfkkvh87d6fun8
+            tableName: books_publishers
+  - changeSet:
+      id: 1670223966077-7
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: book_id
+            indexName: FKbjp7syqc25hpghr8kfj5me7qk
+            tableName: authors_books
+  - changeSet:
+      id: 1670223966077-8
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: author_id
+            indexName: FKo3r5etc5qcjlys9yartx3jgcp
+            tableName: authors_books
+  - changeSet:
+      id: 1670223966077-9
+      author: Artur Tomeyan
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: book_id
+            baseTableName: authors_books
+            constraintName: FKbjp7syqc25hpghr8kfj5me7qk
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: book
+  - changeSet:
+      id: 1670223966077-10
+      author: Artur Tomeyan
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: authors_books
+            constraintName: FKo3r5etc5qcjlys9yartx3jgcp
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: author
+  - changeSet:
+      id: 1670223966077-11
+      author: Artur Tomeyan
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: book_id
+            baseTableName: books_publishers
+            constraintName: FK7tndxhkb3q2tpcpp3g1tsp7kw
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: book
+  - changeSet:
+      id: 1670223966077-12
+      author: Artur Tomeyan
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: publisher_id
+            baseTableName: books_publishers
+            constraintName: FKbcpe8qjcevmbfkkvh87d6fun8
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: publisher
+

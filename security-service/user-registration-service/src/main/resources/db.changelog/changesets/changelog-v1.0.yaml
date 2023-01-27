@@ -1,0 +1,145 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1672053743525-1
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: VARCHAR(36)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(10)
+            tableName: role
+  - changeSet:
+      id: 1672053743525-2
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: VARCHAR(36)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    unique: true
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: enabled
+                  type: boolean
+              - column:
+                  constraints:
+                    nullable: false
+                  name: create_date
+                  type: date
+              - column:
+                  constraints:
+                    nullable: true
+                  name: update_date
+                  type: date
+              - column:
+                  constraints:
+                    nullable: true
+                  name: delete_date
+                  type: date
+            tableName: user
+  - changeSet:
+      id: 1672053743525-3
+      author: Artur Tomeyan
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: VARCHAR(36)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: user_id
+                  type: VARCHAR(36)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: role_id
+                  type: VARCHAR(36)
+            tableName: user_role
+  - changeSet:
+      id: 1672053743525-4
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: role_id
+            indexName: role_id
+            tableName: user_role
+  - changeSet:
+      id: 1672053743525-5
+      author: Artur Tomeyan
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: user_id
+            indexName: user_id
+            tableName: user_role
+  - changeSet:
+      id: 1672053743525-6
+      author: Artur Tomeyan
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: user_role
+            constraintName: user_role_ibfk_1
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: user
+  - changeSet:
+      id: 1672053743525-7
+      author: Artur Tomeyan
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: role_id
+            baseTableName: user_role
+            constraintName: user_role_ibfk_2
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: role

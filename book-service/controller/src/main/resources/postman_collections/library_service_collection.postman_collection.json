@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "339d9983-6cfc-44b6-b327-d76c611d25d5",
+		"name": "library_service_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book service",
+			"item": [
+				{
+					"name": "Author",
+					"item": [
+						{
+							"name": "Get all authors",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/authors",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update author",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 1,\r\n        \"firstName\": \"Miguel\",\r\n        \"lastName\": \"de Cervantes\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/authors/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add author",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Miguel\",\r\n    \"lastName\": \"de Cervantes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/authors",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete author",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/authors/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get author by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/authors/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get author by name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/authors",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "getAllBooks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/books",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add book",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Don Quixote\",\r\n    \"page\": 1056,\r\n    \"publishYear\": 1605,\r\n    \"edition\": \"6th edition\",\r\n    \"image\": null,\r\n    \"description\": \"Don Quixote has become so entranced by...\",\r\n    \"authors\": [\r\n        \"7f247e7b-b9b4-4c81-9e74-42d50f571e38\", \"ff600d53-cc6c-4201-b779-76b406eb0120\"\r\n    ],\r\n    \"publishers\": [\r\n        \"cecb2e5f-1ef8-4c93-b4a8-3a35514bfbf1\"\r\n    ],\r\n    \"genres\": [\r\n        \"7c74416e-6a01-4015-bd49-5fc572e36088\", \"01d4f30a-5749-4d95-b37a-58297e1baf7a\"\r\n    ]\r\n}\r\n\r\n//{\r\n//    \"title\": \"Alice's Adventures in Wonderland\",\r\n//    \"page\": 70,\r\n//    \"publishYear\": 1865,\r\n//    \"image\": null,\r\n//    \"description\": \"Alice's..... \",\r\n//    \"authors\": [\r\n//        \"db078561-ca08-4fbb-be95-9912ac0b3b0f\"\r\n//    ],\r\n//    \"publishers\": [\r\n//        \"32fe487b-9e82-4c81-84df-d30ce31deeb7\"\r\n//    ],\r\n//    \"genres\": [\r\n//       \"6aefb7a8-077f-49c1-be2a-aed0dae20a48\"\r\n//    ]\r\n//}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/books",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update book",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"ede08e98-c43c-4285-9244-4e3e487a208a\",\r\n    \"title\": \"Don Quixote\",\r\n    \"page\": 1056,\r\n    \"publishYear\": 1605,\r\n    \"edition\": \"3th edition\",\r\n    \"image\": null,\r\n    \"description\": \"Don Quixote has become so entranced by...bdfgsd.............asdfadfasdfasdfasdf....................\",\r\n    \"authors\": [\r\n        {\r\n            \"id\": \"7f247e7b-b9b4-4c81-9e74-42d50f571e38\"\r\n        }\r\n    ],\r\n    \"publishers\": [\r\n        {\r\n            \"id\": \"cecb2e5f-1ef8-4c93-b4a8-3a35514bfbf1\"\r\n        }\r\n    ],\r\n    \"genres\":[\r\n        {\r\n            \"id\": \"7c74416e-6a01-4015-bd49-5fc572e36088\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/books/ede08e98-c43c-4285-9244-4e3e487a208a",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"ede08e98-c43c-4285-9244-4e3e487a208a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete book",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/books/b9ca77c6-19a3-4666-8c58-bfd3c9322934",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"b9ca77c6-19a3-4666-8c58-bfd3c9322934"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get book by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/books/2fc9e7a5-8fb2-4d2c-8204-f613b64a0e60",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"2fc9e7a5-8fb2-4d2c-8204-f613b64a0e60"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by title",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/books/byTitle/Don Quixote",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"byTitle",
+										"Don Quixote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get book by publish year",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/books/byYear/1605",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"byYear",
+										"1605"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get books by author",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Miguel\",\r\n    \"lastName\": \"de Cervantes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/books/byAuthor",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"byAuthor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get books by publisher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Francisco de Robles\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/books/byPublisher",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"byPublisher"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get books by genre",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Novel\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/books/byGenre",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"byGenre"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Genre",
+					"item": [
+						{
+							"name": "Get genre by name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/genres",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllGenres",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/genres",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add genre",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Novel\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/genres",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update genre",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"2\",\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/genres/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"genres",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete genre",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/genres/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"genres",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get genre by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/genres",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"genres"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Publisher",
+					"item": [
+						{
+							"name": "Get publisher by name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/publishers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllPublishers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/publishers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add publisher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Francisco de Robles\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/publishers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update publisher",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"2\",\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/publishers/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"publishers",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete publisher",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/publishers/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"publishers",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get publisher by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/publishers/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"publishers",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Security service",
+			"item": [
+				{
+					"name": "User registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Artur\",\r\n    \"lastName\": \"Tomeyan\",\r\n    \"email\": \"artur@tomeyan.com\",\r\n    \"username\": \"artur\",\r\n    \"password\": \"Artur123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
