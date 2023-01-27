@@ -767,7 +767,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Artur\",\r\n    \"lastName\": \"Tomeyan\",\r\n    \"email\": \"artur@tomeyan.com\",\r\n    \"username\": \"artur\",\r\n    \"password\": \"Artur123\"\r\n}",
+							"raw": "{\r\n    \"firstName\": \"Artur\",\r\n    \"lastName\": \"Tomeyan\",\r\n    \"email\": \"artur@tomeyan.com\",\r\n    \"username\": \"artur\",\r\n    \"password\": \"Artur1234!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -775,11 +775,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/register",
+							"raw": "localhost:8081/api/v1/register",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"api",
 								"v1",
