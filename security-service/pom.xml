@@ -9,6 +9,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <modules>
+        <module>user-registration-service</module>
+    </modules>
+    <packaging>pom</packaging>
     <groupId>com.library.security</groupId>
     <artifactId>security-service</artifactId>
 

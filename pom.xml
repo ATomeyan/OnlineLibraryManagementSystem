@@ -17,6 +17,7 @@
     <modules>
         <module>book-service</module>
         <module>security-service</module>
+        <module>eureka-server</module>
     </modules>
 
     <properties>
