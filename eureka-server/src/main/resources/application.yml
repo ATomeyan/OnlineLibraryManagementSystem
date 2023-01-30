@@ -8,3 +8,6 @@ eureka:
       defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
 server:
   port: 8761
+spring:
+  application:
+    name: eureka-server
