@@ -8,12 +8,7 @@
     <artifactId>OnlineLibraryManagementSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <!--<modules>
-        <module>book-service/persistence</module>
-        <module>book-service/service</module>
-        <module>book-service/controller</module>
-        <module>security-service</module>
-    </modules>-->
+
     <modules>
         <module>book-service</module>
         <module>security-service</module>
