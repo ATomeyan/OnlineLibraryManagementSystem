@@ -18,6 +18,7 @@
         <module>book-service</module>
         <module>security-service</module>
         <module>eureka-server</module>
+        <module>zuul-gateway-api</module>
     </modules>
 
     <properties>
