@@ -1,15 +1,21 @@
 spring:
   application:
     name: api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: book-service
-          uri: lb://book-service
-          predicates: Path=/api/v1/books
-        - id: user-registration-service
-          uri: lb://user-registration-service
-          predicates:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: book-service
+#          uri: lb://book-service
+#          predicates: Path=/api/v1/books
+#        - id: book-service
+#          uri: lb://book-service
+#          predicates: Path=/api/v1/authors
+#        - id: book-service
+#          uri: lb://book-service
+#          predicates: Path=/api/v1/publishers
+#        - id: book-service
+#          uri: lb://book-service
+#          predicates: Path=/api/v1/genres
 server:
   port: 8083
 eureka:
