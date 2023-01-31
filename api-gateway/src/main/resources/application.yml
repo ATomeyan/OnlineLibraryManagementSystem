@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: book-service
+          uri: lb://book-service
+          predicates: Path=/api/v1/books
+        - id: user-registration-service
+          uri: lb://user-registration-service
+          predicates:
+server:
+  port: 8083
+eureka:
+  client:
+    service-url:
+      default-zone: https://localhost:8761/eureka
