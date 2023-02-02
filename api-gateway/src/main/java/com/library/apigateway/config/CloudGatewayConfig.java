@@ -23,6 +23,8 @@ public class CloudGatewayConfig {
                         .uri("lb://book-service"))
                 .route("book-service", r -> r.path("/api/v1/genres")
                         .uri("lb://book-service"))
+                .route("user-registration-service", r -> r.path("/api/v1/register")
+                        .uri("lb://user-registration-service"))
                 .build();
     }
 }
