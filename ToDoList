@@ -3,7 +3,6 @@
 3. Add user, role, user-role and user-books.
 4. Implement user authorization and authentication with OAuth(Google, ...) + Keycloak.
 5. (Optional) Change SQL DBMS to PostgreSQL, for adding additional performance.
-6. Pay attention to mapper classes to improving update methods.
-7. (Optional) Create unit tests.
-8. Create book (pdf, epub... or any)file upload service.
-9. Create book file reader service.
+6. (Optional) Create unit tests.
+7. Create book (pdf, epub... or any)file upload service.
+8. Create book file reader service.
