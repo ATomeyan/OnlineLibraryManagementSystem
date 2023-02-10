@@ -10,7 +10,7 @@
     </parent>
 
     <modules>
-        <module>user-registration-service</module>
+        <module>user-auth-service</module>
     </modules>
     <packaging>pom</packaging>
     <groupId>com.library.security</groupId>
