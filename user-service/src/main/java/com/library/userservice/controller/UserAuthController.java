@@ -36,8 +36,8 @@ public class UserAuthController {
 
     @PostMapping("/authenticate")
     public ResponseEntity<UserAuthenticationResponseDto> login(@RequestBody @Valid UserAuthenticationRequestDto authenticationRequestDto) {
+        UserAuthenticationResponseDto authentication = userService.authentication(authenticationRequestDto);
 
-        //TODO
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.OK).body(authentication);
     }
 }
