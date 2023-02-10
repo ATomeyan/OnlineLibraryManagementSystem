@@ -5,4 +5,6 @@ package com.library.userauthenticationservice.model;
  * @date 09/02/2023
  */
 public class UserAuthenticationResponse {
+
+
 }
