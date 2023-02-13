@@ -12,9 +12,6 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 public class UserAuthenticationResponseDto {
-    private UUID id;
-    private String firstName;
-    private String lastName;
-    private String username;
-    private String email;
+    private String accessToken;
+    private String refreshToken;
 }

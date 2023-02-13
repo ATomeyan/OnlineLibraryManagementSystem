@@ -10,7 +10,7 @@ import com.library.userservice.entity.User;
 import com.library.userservice.entity.UserRoles;
 import com.library.userservice.exceptions.NotValidException;
 import com.library.userservice.exceptions.UserAlreadyExistException;
-import com.library.userservice.exceptions.UserDoesntExistException;
+import com.library.userservice.exceptions.ObjectDoesntExistException;
 import com.library.userservice.mapper.UserMapper;
 import com.library.userservice.mapper.UserRolesMapper;
 import com.library.userservice.repository.RoleRepository;
@@ -61,6 +61,11 @@ public class UserServiceImpl implements UserService {
 
         Role role = roleRepository.findRoleByRole(Roles.USER.getRole());
 
+        if (role == null) {
+            LOGGER.error("Role doesn't exist.");
+            throw new ObjectDoesntExistException("Role doesn't exist.");
+        }
+
         User user = userMapper.mapRegistrationRequestToEntity(registrationRequestDto);
         user.setPassword(passwordEncoder.encode(registrationRequestDto.getPassword()));
 
@@ -86,9 +91,8 @@ public class UserServiceImpl implements UserService {
 
         if (user.isEmpty()) {
             LOGGER.error("User by {}, {} doesn't found please register.", username, email);
-            throw new UserDoesntExistException("User doesn't found please register.");
+            throw new ObjectDoesntExistException("User doesn't found please register.");
         }
-
 
         return null;
     }

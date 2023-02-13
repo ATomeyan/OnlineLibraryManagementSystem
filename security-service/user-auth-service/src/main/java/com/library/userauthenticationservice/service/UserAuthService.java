@@ -7,6 +7,6 @@ import com.library.userauthenticationservice.model.UserAuthenticationResponse;
  * @author Artur Tomeyan
  * @date 09/02/2023
  */
-public interface UserService {
+public interface UserAuthService {
     UserAuthenticationResponse login(UserAuthenticationRequest userAuthenticationRequest);
 }

@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "user-service", url = "localhost:8082")
 public interface UserFeignClient {
 
-    @PostMapping("/api/v1/authenticate")
+    @PostMapping("/api/v1/user/authenticate")
     UserAuthenticationResponse authenticate(@RequestBody UserAuthenticationRequest userAuthentication);
 }

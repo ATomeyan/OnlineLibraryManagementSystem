@@ -41,8 +41,8 @@ public class AdviserController extends ResponseEntityExceptionHandler {
         );
     }
 
-    @ExceptionHandler(UserDoesntExistException.class)
-    public ResponseEntity<Object> handleObjectNotExistException(UserDoesntExistException exception) {
+    @ExceptionHandler(ObjectDoesntExistException.class)
+    public ResponseEntity<Object> handleObjectNotExistException(ObjectDoesntExistException exception) {
 
         return new ResponseEntity<>(
                 new ExceptionResponse(
