@@ -12,5 +12,5 @@ public interface UserService {
 
     void register(UserRegistrationRequestDto registrationRequestDto);
 
-    UserAuthenticationResponseDto authentication(UserAuthenticationRequestDto authenticationRequestDto);
+    UserAuthenticationResponseDto userAuthentication(UserAuthenticationRequestDto authenticationRequestDto);
 }

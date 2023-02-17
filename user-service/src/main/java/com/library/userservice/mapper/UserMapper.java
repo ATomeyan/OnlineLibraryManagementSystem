@@ -1,5 +1,6 @@
 package com.library.userservice.mapper;
 
+import com.library.userservice.dto.user.UserAuthenticationResponseDto;
 import com.library.userservice.dto.user.UserRegistrationRequestDto;
 import com.library.userservice.entity.User;
 import org.springframework.stereotype.Component;
@@ -29,5 +30,14 @@ public final class UserMapper {
         user.setCreateDate(LocalDate.now());
 
         return user;
+    }
+
+    public UserAuthenticationResponseDto mapUserEntityToAuthenticationResponse(User user) {
+
+        UserAuthenticationResponseDto userAuthentication = new UserAuthenticationResponseDto();
+
+        userAuthentication.setId(user.getId());
+
+        return userAuthentication;
     }
 }

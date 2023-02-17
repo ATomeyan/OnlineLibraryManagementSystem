@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserAuthenticationResponseDto authentication(UserAuthenticationRequestDto authenticationRequestDto) {
+    public UserAuthenticationResponseDto userAuthentication(UserAuthenticationRequestDto authenticationRequestDto) {
 
         if (authenticationRequestDto == null) {
             LOGGER.error("Authentication data is not valid.");
@@ -94,6 +94,8 @@ public class UserServiceImpl implements UserService {
             throw new ObjectDoesntExistException("User doesn't found please register.");
         }
 
-        return null;
+        UserAuthenticationResponseDto userAuthenticationResponseDto = userMapper.mapUserEntityToAuthenticationResponse(user.get());
+
+        return userAuthenticationResponseDto;
     }
 }

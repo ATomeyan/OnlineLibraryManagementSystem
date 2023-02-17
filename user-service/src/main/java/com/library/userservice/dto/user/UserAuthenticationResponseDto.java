@@ -12,6 +12,13 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 public class UserAuthenticationResponseDto {
+
+    private UUID id;
     private String accessToken;
     private String refreshToken;
+
+    public UserAuthenticationResponseDto(String accessToken, String refreshToken) {
+        this.accessToken = accessToken;
+        this.refreshToken = refreshToken;
+    }
 }
