@@ -1,4 +1,4 @@
-package com.library.controller.apiv1;
+package com.library.controller;
 
 import com.library.dto.genre.GenreRequestDto;
 import com.library.dto.genre.GenreResponseDto;

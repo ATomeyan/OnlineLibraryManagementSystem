@@ -1,4 +1,4 @@
-package com.library.controller.apiv1;
+package com.library.controller;
 
 import com.library.dto.publisher.PublisherRequestDto;
 import com.library.dto.publisher.PublisherResponseDto;

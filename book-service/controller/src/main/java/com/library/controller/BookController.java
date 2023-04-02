@@ -1,4 +1,4 @@
-package com.library.controller.apiv1;
+package com.library.controller;
 
 import com.library.dto.author.AuthorRequestDto;
 import com.library.dto.book.BookRequestDto;
