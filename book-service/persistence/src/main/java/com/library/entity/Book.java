@@ -14,6 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
+@Builder
 @Entity
 @Table(name = DBConstants.TABLE_BOOK)
 public class Book {
