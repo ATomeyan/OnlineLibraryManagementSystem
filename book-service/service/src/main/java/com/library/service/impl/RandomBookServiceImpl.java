@@ -3,6 +3,7 @@ package com.library.service.impl;
 import ch.qos.logback.classic.Logger;
 import com.library.dto.book.BookResponseDto;
 import com.library.entity.Book;
+import com.library.exceptions.EmptyException;
 import com.library.mapper.BookMapper;
 import com.library.repository.BookRepository;
 import com.library.service.RandomBookService;
@@ -31,12 +32,15 @@ public class RandomBookServiceImpl implements RandomBookService {
 
     @Override
     public BookResponseDto bookResponseDto() {
+        Random random = new Random();
         List<Book> books = bookRepository.findAll();
 
+        if (books.isEmpty()) {
+            LOGGER.error("The list of books is empty.");
+            throw new EmptyException("The list of books is empty.");
+        }
+
         List<BookResponseDto> responseBooks = books.stream().map(bookMapper::mapEntityToAllBookResponseDto).collect(Collectors.toList());
-
-        Random random = new Random();
-
         int i = random.nextInt(responseBooks.size());
 
         return responseBooks.get(i);
