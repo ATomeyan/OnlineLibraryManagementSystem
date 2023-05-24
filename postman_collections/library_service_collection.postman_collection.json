@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "339d9983-6cfc-44b6-b327-d76c611d25d5",
+		"_postman_id": "41015799-9991-4388-aec7-a186f5c0158e",
 		"name": "library_service_collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -29,11 +29,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/authors",
+									"raw": "localhost:8081/api/v1/authors",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -58,11 +58,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/authors/1",
+									"raw": "localhost:8081/api/v1/authors/1",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -88,11 +88,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/authors",
+									"raw": "localhost:8081/api/v1/authors",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -108,11 +108,11 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/authors/1",
+									"raw": "localhost:8081/api/v1/authors/1",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -129,11 +129,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/authors/",
+									"raw": "localhost:8081/api/v1/authors/",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -159,11 +159,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/authors",
+									"raw": "localhost:8081/api/v1/authors",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -184,11 +184,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/books",
+									"raw": "localhost:8081/api/v1/books",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -224,11 +224,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/books",
+									"raw": "localhost:8081/api/v1/books",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -253,11 +253,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/books/ede08e98-c43c-4285-9244-4e3e487a208a",
+									"raw": "localhost:8081/api/v1/books/ede08e98-c43c-4285-9244-4e3e487a208a",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -274,11 +274,11 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/books/b9ca77c6-19a3-4666-8c58-bfd3c9322934",
+									"raw": "localhost:8081/api/v1/books/b9ca77c6-19a3-4666-8c58-bfd3c9322934",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -295,11 +295,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/books/2fc9e7a5-8fb2-4d2c-8204-f613b64a0e60",
+									"raw": "localhost:8081/api/v1/books/2fc9e7a5-8fb2-4d2c-8204-f613b64a0e60",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -316,11 +316,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/books/byTitle/Don Quixote",
+									"raw": "localhost:8081/api/v1/books/byTitle/Don Quixote",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -338,11 +338,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/books/byYear/1605",
+									"raw": "localhost:8081/api/v1/books/byYear/1605",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -369,11 +369,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/books/byAuthor",
+									"raw": "localhost:8081/api/v1/books/byAuthor",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -399,11 +399,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/books/byPublisher",
+									"raw": "localhost:8081/api/v1/books/byPublisher",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -429,16 +429,36 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/books/byGenre",
+									"raw": "localhost:8081/api/v1/books/byGenre",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
 										"books",
 										"byGenre"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Randomly",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/api/v1/random",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"v1",
+										"random"
 									]
 								}
 							},
@@ -464,11 +484,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/genres",
+									"raw": "localhost:8081/api/v1/genres",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -484,11 +504,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/genres",
+									"raw": "localhost:8081/api/v1/genres",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -513,11 +533,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/genres",
+									"raw": "localhost:8081/api/v1/genres",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -542,11 +562,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/genres/",
+									"raw": "localhost:8081/api/v1/genres/",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -563,11 +583,11 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/genres/",
+									"raw": "localhost:8081/api/v1/genres/",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -584,11 +604,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/genres",
+									"raw": "localhost:8081/api/v1/genres",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -618,11 +638,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/publishers",
+									"raw": "localhost:8081/api/v1/publishers",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -638,11 +658,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/publishers",
+									"raw": "localhost:8081/api/v1/publishers",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -667,11 +687,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/publishers",
+									"raw": "localhost:8081/api/v1/publishers",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -696,11 +716,11 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/v1/publishers/2",
+									"raw": "localhost:8081/api/v1/publishers/2",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -717,11 +737,11 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/publishers/2",
+									"raw": "localhost:8081/api/v1/publishers/2",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -738,11 +758,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/v1/publishers/",
+									"raw": "localhost:8081/api/v1/publishers/",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8081",
 									"path": [
 										"api",
 										"v1",
@@ -775,11 +795,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8081/api/v1/register",
+							"raw": "localhost:8082/api/v1/register",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8082",
 							"path": [
 								"api",
 								"v1",
