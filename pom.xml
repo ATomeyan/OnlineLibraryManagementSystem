@@ -15,6 +15,7 @@
         <module>eureka-server</module>
         <module>api-gateway</module>
         <module>user-service</module>
+        <module>recommendation-service</module>
     </modules>
 
     <properties>
