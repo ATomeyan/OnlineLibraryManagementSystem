@@ -1,7 +1,7 @@
 package com.library.exceptions;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
  * @author Artur Tomeyan
  * @date 13/12/2022
  */
-@Data
+@Getter
 @AllArgsConstructor
 @ToString
 public class ExceptionResponse {
